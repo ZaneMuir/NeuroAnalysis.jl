@@ -2,9 +2,9 @@ push!(LOAD_PATH,"../src/")
 using Documenter, NeuroAnalysis
 
 makedocs(
-    format = :html,
-    sitename = "NeuroAnalysis.jl",
-)
+    # format = :html,
+    # sitename = "NeuroAnalysis.jl",
+    )
 
 deploydocs(
     deps   = Deps.pip("mkdocs", "python-markdown-math"),
