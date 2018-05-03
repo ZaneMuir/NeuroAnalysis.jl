@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "sample\n\n\n\n\nsample\n\n\n\n\n#\n\n\nNeuroAnalysis.helloworld\n \n \nMethod\n.\n\n\nshow your name!\n\n\nArgs:     hahaha (str): your name\n\n\nReturns:     \"hello, world!\"\n\n\nsource", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#sample", 
+            "text": "sample   #  NeuroAnalysis.helloworld     Method .  show your name!  Args:     hahaha (str): your name  Returns:     \"hello, world!\"  source", 
+            "title": "sample"
+        }
+    ]
+}
