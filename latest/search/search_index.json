@@ -2,13 +2,28 @@
     "docs": [
         {
             "location": "/", 
-            "text": "sample\n\n\n\n\nsample\n\n\n\n\n#\n\n\nNeuroAnalysis.helloworld\n \n \nMethod\n.\n\n\nshow your name!\n\n\nArgs:     hahaha (str): your name\n\n\nReturns:     \"hello, world!\"\n\n\nsource", 
+            "text": "NeuroAnalysis.jl\n\n\n\n\nWorkflow and Package Manual\n\n\n\n\nAPI\n\n\n\n\nSpike\n\n\nSpikeUnits\n\n\nLinear Filter\n\n\nVisualization\n\n\n\n\n\n\nReader\n\n\nWaveform\n\n\n\n\n\n\nIndex\n\n\n\n\nNeuroAnalysis.SpikeUnits.SpikeMarker\n\n\nNeuroAnalysis.SpikeUnits.SpikeUnit\n\n\nNeuroAnalysis.LinearFilter.apply_roi_aggregate\n\n\nNeuroAnalysis.SpikeUnits._default_marker_chunker\n\n\nNeuroAnalysis.SpikeUnits.import_spike_train_data\n\n\nNeuroAnalysis.SpikeUnits.marker_validity", 
             "title": "Home"
         }, 
         {
-            "location": "/#sample", 
-            "text": "sample   #  NeuroAnalysis.helloworld     Method .  show your name!  Args:     hahaha (str): your name  Returns:     \"hello, world!\"  source", 
-            "title": "sample"
+            "location": "/#neuroanalysisjl", 
+            "text": "", 
+            "title": "NeuroAnalysis.jl"
+        }, 
+        {
+            "location": "/#workflow-and-package-manual", 
+            "text": "", 
+            "title": "Workflow and Package Manual"
+        }, 
+        {
+            "location": "/#api", 
+            "text": "Spike  SpikeUnits  Linear Filter  Visualization    Reader  Waveform", 
+            "title": "API"
+        }, 
+        {
+            "location": "/#index", 
+            "text": "NeuroAnalysis.SpikeUnits.SpikeMarker  NeuroAnalysis.SpikeUnits.SpikeUnit  NeuroAnalysis.LinearFilter.apply_roi_aggregate  NeuroAnalysis.SpikeUnits._default_marker_chunker  NeuroAnalysis.SpikeUnits.import_spike_train_data  NeuroAnalysis.SpikeUnits.marker_validity", 
+            "title": "Index"
         }
     ]
 }
