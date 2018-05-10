@@ -1,7 +1,7 @@
 module NeuroAnalysis
 
 include("Spike/SpikeUnits.jl")
-include("SPike/FiringRate.jl")
+include("Spike/FiringRate.jl")
 
 export SpikeUnits, LinearFilter
 
