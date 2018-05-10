@@ -7,13 +7,13 @@ using Documenter, NeuroAnalysis
 #     )
 
 # deploydocs(
-#     deps   = Deps.pip("mkdocs", "python-markdown-math"),
+#     deps   = Deps.pip("mkdocs", "python-markdown-math", "mkdocs-material"),
 #     repo = "github.com/ZaneMuir/NeuroAnalysis.jl.git",
 #     julia  = "0.6"
 # )
 
 makedocs(
-    format = :html,
+#    format = :html,
     sitename = "NeuroAnalysis.jl",
     pages = Any[
         "Introduction" => "index.md",
@@ -27,3 +27,11 @@ makedocs(
         ]
     ]
     )
+
+deploydocs(
+    deps   = Deps.pip("mkdocs", "python-markdown-math", "mkdocs-material"),
+    repo = "github.com/ZaneMuir/NeuroAnalysis.jl.git",
+    julia  = "0.6"
+)
+
+

@@ -1,5 +1,5 @@
 
-# Spike 
+# Spike
 
 ```@index
 Pages = ["Spike.md"]
@@ -26,7 +26,19 @@ import_spike_train_data
 ```
 
 ## Linear Filter
-**TODO**
+```@meta
+CurrentModule=NeuroAnalysis.LinearFilter
+```
+
+### Functions
+```@docs
+apply_roi_aggregate
+```
+
+### Kernels
+```@docs
+gaussian_kernel
+```
 
 ## Visualization
 **TODO**
