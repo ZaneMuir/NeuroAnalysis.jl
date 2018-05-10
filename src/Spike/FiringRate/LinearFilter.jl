@@ -19,7 +19,6 @@ function apply_linear_filter(k, tstart, tend; step=100)
     k(_t)
 end
 
-"""
 ```apply_roi_aggregate(kernel::LinearFilter.kernel, starts::Array{Float64,1}, roi::Range, backgrounds::Range)```
 
 Returns:
