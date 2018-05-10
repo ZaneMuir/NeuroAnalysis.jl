@@ -3,11 +3,18 @@ julia:
   - nightly
   - 0.6
 
+notifications:
+  email: false
+
 script:
   - julia -e "Pkg.clone(pwd()); Pkg.build(\"NeuroAnalysis\")"
-  - julia test/runtest.jl
+#  - julia test/runtest.jl
 
 
 after_success:
   - julia -e 'Pkg.add("Documenter")'
+  - julia -e 'Pkg.add("DataFrames")'
+  - julia -e 'Pkg.add("CSV")'
+  - julia -e 'Pkg.add("Query")'
+  - julia -e 'Pkg.add("MAT")'
   - julia -e 'cd(Pkg.dir("NeuroAnalysis")); include(joinpath("docs", "make.jl"))'

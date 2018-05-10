@@ -1,23 +1,9 @@
 module NeuroAnalysis
 
-export helloworld
+include("Spike/SpikeUnits.jl")
+include("SPike/FiringRate.jl")
 
-"""
-show your name!
-
-Args:
-    hahaha (str): your name
-
-Returns:
-    "hello, world!"
-
-"""
-function helloworld()
-    "hello, world!"
-end
-
-function helloagain()
-    "hey, bro!"
-end
+export SpikeUnits, LinearFilter
 
 end  # module NeuroAnalysis
+

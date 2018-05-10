@@ -4,4 +4,7 @@
 deps/deps.jl
 docs/build/
 docs/site/
+
 .DS_Store
+demo/
+*.swp

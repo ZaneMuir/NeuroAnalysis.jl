@@ -1,0 +1,1 @@
+include("FiringRate/LinearFilter.jl")
