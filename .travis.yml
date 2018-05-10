@@ -8,7 +8,7 @@ notifications:
 
 script:
   - julia -e "Pkg.clone(pwd()); Pkg.build(\"NeuroAnalysis\")"
-  - julia test/runtest.jl
+#  - julia test/runtest.jl
 
 
 after_success:
