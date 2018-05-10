@@ -3,6 +3,9 @@ julia:
   - nightly
   - 0.6
 
+notifications:
+  email: false
+
 script:
   - julia -e "Pkg.clone(pwd()); Pkg.build(\"NeuroAnalysis\")"
   - julia test/runtest.jl

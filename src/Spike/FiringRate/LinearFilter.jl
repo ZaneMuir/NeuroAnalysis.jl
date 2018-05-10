@@ -9,10 +9,7 @@ The Gaussian Kernel.
 
 ```math
 w(\\tau) = \\frac{1}{\\sqrt{2 \\pi} \\sigma_w}
-\\exp(-\\frac{(\\mathbf{t} - \\tau)^2}{2 \\sigma^2_w})
-```
-"""
-function gaussian_kernel(train::Array{Float64,1},sigma::Float64=1.0)
+\\exp(-\\frac{(\\mathbf{t
     return t->sum(1/sqrt(2*pi)/sigma .* exp.(-broadcast(-, train, t).^2./(2*sigma^2)), 1)
 end
 
