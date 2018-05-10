@@ -17,4 +17,4 @@ after_success:
   - julia -e 'Pkg.add("CSV")'
   - julia -e 'Pkg.add("Query")'
   - julia -e 'Pkg.add("MAT")'
- - julia -e 'cd(Pkg.dir("NeuroAnalysis")); include(joinpath("docs", "make.jl"))'
+  - julia -e 'cd(Pkg.dir("NeuroAnalysis")); include(joinpath("docs", "make.jl"))'
