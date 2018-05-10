@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "NeuroAnalysis.jl\n\n\n\n\nWorkflow and Package Manual\n\n\n\n\nAPI\n\n\n\n\nSpike\n\n\nSpikeUnits\n\n\nLinear Filter\n\n\nVisualization\n\n\n\n\n\n\nReader\n\n\nWaveform\n\n\n\n\n\n\nIndex\n\n\n\n\nNeuroAnalysis.SpikeUnits.SpikeMarker\n\n\nNeuroAnalysis.SpikeUnits.SpikeUnit\n\n\nNeuroAnalysis.LinearFilter.apply_roi_aggregate\n\n\nNeuroAnalysis.SpikeUnits._default_marker_chunker\n\n\nNeuroAnalysis.SpikeUnits.import_spike_train_data\n\n\nNeuroAnalysis.SpikeUnits.marker_validity", 
+            "text": "NeuroAnalysis.jl\n\n\n\n\nWorkflow and Package Manual\n\n\n\n\nAPI\n\n\n\n\nSpike\n\n\nSpikeUnits\n\n\nLinear Filter\n\n\nVisualization\n\n\n\n\n\n\nReader\n\n\nWaveform\n\n\n\n\n\n\nIndex\n\n\n\n\nNeuroAnalysis.SpikeUnits.SpikeMarker\n\n\nNeuroAnalysis.SpikeUnits.SpikeUnit\n\n\nNeuroAnalysis.LinearFilter.apply_roi_aggregate\n\n\nNeuroAnalysis.LinearFilter.gaussian_kernel\n\n\nNeuroAnalysis.SpikeUnits._default_marker_chunker\n\n\nNeuroAnalysis.SpikeUnits.import_spike_train_data\n\n\nNeuroAnalysis.SpikeUnits.marker_validity", 
             "title": "Home"
         }, 
         {
@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/#index", 
-            "text": "NeuroAnalysis.SpikeUnits.SpikeMarker  NeuroAnalysis.SpikeUnits.SpikeUnit  NeuroAnalysis.LinearFilter.apply_roi_aggregate  NeuroAnalysis.SpikeUnits._default_marker_chunker  NeuroAnalysis.SpikeUnits.import_spike_train_data  NeuroAnalysis.SpikeUnits.marker_validity", 
+            "text": "NeuroAnalysis.SpikeUnits.SpikeMarker  NeuroAnalysis.SpikeUnits.SpikeUnit  NeuroAnalysis.LinearFilter.apply_roi_aggregate  NeuroAnalysis.LinearFilter.gaussian_kernel  NeuroAnalysis.SpikeUnits._default_marker_chunker  NeuroAnalysis.SpikeUnits.import_spike_train_data  NeuroAnalysis.SpikeUnits.marker_validity", 
             "title": "Index"
         }
     ]
