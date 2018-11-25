@@ -1,3 +1,7 @@
+# jupyter
+.ipynb_checkpoints/
+
+# julia
 *.jl.cov
 *.jl.*.cov
 *.jl.mem
@@ -5,6 +9,8 @@ deps/deps.jl
 docs/build/
 docs/site/
 
+# misc
 .DS_Store
 demo/
+dev/
 *.swp
