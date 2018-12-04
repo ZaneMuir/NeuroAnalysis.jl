@@ -84,14 +84,14 @@ mutable struct EDFData
         
         _x.FILE_HEADER = EDF_FileHeader(_f)
         
-        _raw_data = zeros(Int16, _x.FILE_HEADER.NumChannel, _x.FILE_HEADER.NumRecord * _x.FILE_HEADER.NumSamplesInRecord[1])
+        _raw_data = zeros(Int16, _x.FILE_HEADER.NumRecord * _x.FILE_HEADER.NumSamplesInRecord[1], _x.FILE_HEADER.NumChannel)
 #         _raw_reserved = zeros(Int16, _x.FILE_HEADER.NumChannel, _x.FILE_HEADER.NumRecord * _x.FILE_HEADER.NumReservedSamplesInRecord[1])
         
         _step = sum(_x.FILE_HEADER.NumSamplesInRecord)
         _chstep = _x.FILE_HEADER.NumSamplesInRecord[1]
         for _record_idx = 1:_x.FILE_HEADER.NumRecord
-            record_data = read!(_f, Vector{Int16}(undef, _step))
-            _raw_data[:, _chstep*(_record_idx-1)+1:_chstep*_record_idx] = reshape(record_data, (_x.FILE_HEADER.NumChannel, _chstep))
+            record_data = read!(_f, Array{Int16, 2}(undef, _chstep, _x.FILE_HEADER.NumChannel))
+            _raw_data[_chstep*(_record_idx-1)+1:_chstep*_record_idx, :] = record_data
         end
         _x.CONTINUOUS_DATA = _raw_data
         
@@ -130,7 +130,7 @@ function export_isplit(_edf::EDFData; Comment = nothing, _dir="./iSplit")
     for (chidx, chlabel) in enumerate(_edf.FILE_HEADER.ChannelLabels)
         
         _comment["label"] = chlabel
-        _value = _edf.CONTINUOUS_DATA[chidx, :]
+        _value = _edf.CONTINUOUS_DATA[:, chidx]
         _idx = hash(_value) |> repr
         
         if haskey(channel_index, @sprintf("channel%03d", chidx))
