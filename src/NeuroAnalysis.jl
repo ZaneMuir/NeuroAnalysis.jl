@@ -1,22 +1,10 @@
 module NeuroAnalysis
 
-# using Printf
-# using HDF5
-# using JLD
-# using JSON
-# using DSP
 using FileIO, JLD2
+using Plots
+gr(fmt="png", size=(600, 400))
 
 include("IO/io.jl")
-
-# include("Spike/SpikeUnits.jl")
-# include("Spike/FiringRate/LinearFilter.jl")
-# include("lfp.jl")
-# include("io.jl")
-
-
-# export SpikeUnits, LinearFilter
-
-
+include("Spike/Spike.jl")
 
 end  # module NeuroAnalysis
