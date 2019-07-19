@@ -33,7 +33,9 @@ mutable struct PLX_FileHeader
     ContinuousMaxMagnitudeMV::UInt16;
     SpikePreAmpGain::UInt16;
 
-    Padding::String;
+    #AcquiringSoftware::String  # char[18]
+    #ProcessingSoftware::String  # char[18]
+    Padding::String;  # // char[10]
 
     TSCounts::Array{Int32, 2};
     WFCounts::Array{Int32, 2};
@@ -65,8 +67,8 @@ mutable struct PLX_FileHeader
 end
 
 mutable struct PLX_SpikeChannelHeader
-    Name::String;
-    SIGName::String;
+    Name::String;  # char[32]
+    SIGName::String;  # char[32]
     Channel::Cint;
     WFRate::Cint;
 
@@ -79,15 +81,19 @@ mutable struct PLX_SpikeChannelHeader
     Method::Cint;
     NUnits::Cint;
 
-    Template::Array{Cshort, 2};
-    Fit::Vector{Cint};
+    Template::Array{Cshort, 2};  # [5][64]
+    Fit::Vector{Cint};  # [5]
     SortWidth::Cint;
 
-    Boxes::Array{Cshort, 3};
+    Boxes::Array{Cshort, 3};  # [5][2][4]
     SortBeg::Cint;
 
-    Comment::String;
-    Padding::Vector{Cint};
+    Comment::String;  # char[128]
+
+    # SrcId::Cuchar;
+    # reserved::Cuchar;
+    # ChanId::Cushort;
+    Padding::Vector{Cint};  # char[10]
 
     PLX_SpikeChannelHeader(file::IOStream) = begin
         _x = new()
@@ -112,10 +118,14 @@ mutable struct PLX_SpikeChannelHeader
 end
 
 mutable struct PLX_EventChannelHeader
-    Name::String;
+    Name::String;  # char[32]
     Channel::Cint;
-    Comment::String;
-    Padding::Vector{Cint};
+    Comment::String;  # char[128]
+
+    # SrcId::Cuchar;
+    # reserved::Cuchar;
+    # ChanId::Cushort;
+    Padding::Vector{Cint};  # char[32]
 
     PLX_EventChannelHeader(file::IOStream) = begin
         _x = new()
@@ -258,3 +268,4 @@ mutable struct PLXData
         _x
     end
 end
+
